@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Python-Tester</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="/eel.js"></script>
+</head>
+
+<body>
+  <h1>Python-Tester</h1>
+  <p>
+    Gib hier den Namen Deiner Python-Funktion ein:
+  </p>
+  <div class="eingabefeld">
+    <input type="text" id="funktionsname" spellcheck="false">
+  </div>
+  
+  <div class="container">
+    <table id="tabelle">
+      <tr>
+        <th>zahl1</th>
+        <th>zahl2</th>
+        <th>zahl3</th>
+        <th>zahl4</th>
+        <th>return</th>
+      </tr>
+
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+
+      <tr>
+        <td colspan="5">
+          <button class="btn" id="neueZeileBtn" onclick="neueZeile();">
+            +
+          </button>
+        </td>
+        
+      </tr>
+    </table>
+  </div>
+
+  <p>
+    Gib hier den Namen Deines Python-Programms ein:
+  </p>
+  <div class="eingabefeld">
+    <input type="text" id="skriptname" spellcheck="false">
+    <label id="folderLabel" for="filepicker">
+      <img id="folder" src="folder-transparent.png">
+    </label>
+    <input type="file" id="filepicker" onchange="dateinamenAendern()">
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <button class="btn" id="runButton">
+        Tests ausführen
+      </button>
+    </div>
+    <div class="column">
+      <button class="btn" id="testLogButton">
+        Test-Log anzeigen
+      </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <button class="btn" id="saveButton">
+        Tabelle speichern
+      </button>
+    </div>
+    <div class="column">
+      <button class="btn" id="loadButton">
+        Tabelle laden
+      </button>
+    </div>
+  </div>
+
+  <div class="spacer"></div>
+
+
+  <script src="script.js"></script>
+
+
+
+</body>
+
+</html>
