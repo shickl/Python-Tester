@@ -218,7 +218,10 @@ def inDatentypUmwandeln(parameter):
 	'''
 	for i in range(len(parameter)):
 
-		if len(parameter[i]) > 2 and parameter[i][0] == '"' and parameter[i][-1] == '"':
+		if parameter == "[]":
+			# Leere Liste
+			return []
+		elif len(parameter) >= 2 and parameter[i][0] == '"' and parameter[i][-1] == '"':
 			# string explizit angegeben
 			parameter[i] = parameter[i][1:-1]
 		elif parameter[i] == "True":
